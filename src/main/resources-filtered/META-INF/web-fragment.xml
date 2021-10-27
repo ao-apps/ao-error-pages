@@ -41,6 +41,10 @@ along with ao-error-pages.  If not, see <http://www.gnu.org/licenses />.
 		<location>/WEB-INF/ao-error-pages/forbidden.jsp</location>
 	</error-page>
 	<error-page>
+		<exception-type>java.lang.SecurityException</exception-type>
+		<location>/WEB-INF/ao-error-pages/forbidden.jsp</location>
+	</error-page>
+	<error-page>
 		<error-code>404</error-code>
 		<location>/WEB-INF/ao-error-pages/not-found.jsp</location>
 	</error-page>

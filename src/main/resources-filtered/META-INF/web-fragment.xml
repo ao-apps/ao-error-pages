@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ao-error-pages - A set of simple default servlet error pages to prevent accidental information disclosure.
+Copyright (C) 2021  AO Industries, Inc.
+    support@aoindustries.com
+    7262 Bull Pen Cir
+    Mobile, AL 36695
+
+This file is part of ao-error-pages.
+
+ao-error-pages is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+ao-error-pages is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with ao-error-pages.  If not, see <http://www.gnu.org/licenses />.
+-->
+<web-fragment xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-fragment_3_1.xsd"
+  version="3.1"
+  metadata-complete="false">
+	<name>@{project.groupId}:@{project.artifactId}</name>
+	<!-- <display-name>@{project.name} @{project.version}</display-name> -->
+	<description>@{project.description}</description>
+
+	<!-- Error Pages -->
+	<error-page>
+		<error-code>401</error-code>
+		<location>/WEB-INF/ao-error-pages/unauthorized.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/WEB-INF/ao-error-pages/forbidden.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/ao-error-pages/not-found.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/WEB-INF/ao-error-pages/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>503</error-code>
+		<location>/WEB-INF/ao-error-pages/error.jsp</location>
+	</error-page>
+	<error-page>
+		<location>/WEB-INF/ao-error-pages/error.jsp</location>
+	</error-page>
+
+</web-fragment>

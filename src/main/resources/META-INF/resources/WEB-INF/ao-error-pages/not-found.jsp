@@ -27,8 +27,7 @@ along with ao-error-pages.  If not, see <http://www.gnu.org/licenses />.
 	if(exception != null) log(null, exception);
 	// Set the error status
 	if(!response.isCommitted()) response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-%>
-<ao:html>
+%><ao:html>
 	<head>
 		<ao:meta charset="${pageContext.response.characterEncoding}" />
 		<title>404 Not Found</title>

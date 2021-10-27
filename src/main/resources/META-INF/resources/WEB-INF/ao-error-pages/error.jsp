@@ -33,8 +33,7 @@ along with ao-error-pages.  If not, see <http://www.gnu.org/licenses />.
 		Object code = pageContext.getAttribute("code");
 		response.setStatus((code instanceof Integer) ? (Integer)code : Integer.parseInt(code.toString()));
 	}
-%>
-<ao:html>
+%><ao:html>
 	<head>
 		<ao:meta charset="${pageContext.response.characterEncoding}" />
 		<title><ao:out value="${pageScope.code}" /> Error</title>

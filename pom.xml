@@ -119,6 +119,11 @@ along with ao-error-pages.  If not, see <https://www.gnu.org/licenses/>.
 						<dependency>com.aoapps:ao-style</dependency>
 						<dependency>org.apache.taglibs:taglibs-standard-impl</dependency>
 					</usedDependencies>
+					<ignoredDependencies>
+						<!-- No "module-info.java" in some release builds -->
+						<dependency>com.aoapps:ao-collections</dependency>
+						<dependency>com.aoapps:ao-taglib</dependency>
+					</ignoredDependencies>
 				</configuration>
 			</plugin>
 		</plugins>

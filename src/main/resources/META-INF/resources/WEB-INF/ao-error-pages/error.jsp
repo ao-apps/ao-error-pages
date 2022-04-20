@@ -1,6 +1,6 @@
 <%--
 ao-error-pages - A set of simple default servlet error pages to prevent accidental information disclosure.
-Copyright (C) 2021  AO Industries, Inc.
+Copyright (C) 2021, 2022  AO Industries, Inc.
     support@aoindustries.com
     7262 Bull Pen Cir
     Mobile, AL 36695
@@ -24,22 +24,24 @@ along with ao-error-pages.  If not, see <https://www.gnu.org/licenses/>.
 %><%@ page isErrorPage="true"
 %><%@ include file="taglibs.jspf"
 %><c:set var="code" value="${
-	empty requestScope['javax.servlet.error.status_code'] or requestScope['javax.servlet.error.status_code'] le 0
-		? 500 : requestScope['javax.servlet.error.status_code']
+  empty requestScope['javax.servlet.error.status_code'] or requestScope['javax.servlet.error.status_code'] le 0
+    ? 500 : requestScope['javax.servlet.error.status_code']
 }" /><%
-	if(exception != null) log(null, exception);
-	// Set the error status
-	if(!response.isCommitted()) {
-		Object code = pageContext.getAttribute("code");
-		response.setStatus((code instanceof Integer) ? (Integer)code : Integer.parseInt(code.toString()));
-	}
+  if (exception != null) {
+    log(null, exception);
+  }
+  // Set the error status
+  if (!response.isCommitted()) {
+    Object code = pageContext.getAttribute("code");
+    response.setStatus((code instanceof Integer) ? (Integer)code : Integer.parseInt(code.toString()));
+  }
 %><ao:html>
-	<head>
-		<ao:meta charset="${pageContext.response.characterEncoding}" />
-		<title><ao:out value="${pageScope.code}" /> Error</title>
-		<wr:renderStyles />
-	</head>
-	<body>
-		<h1><ao:out value="${pageScope.code}" /> Error</h1>
-	</body>
+  <head>
+    <ao:meta charset="${pageContext.response.characterEncoding}" />
+    <title><ao:out value="${pageScope.code}" /> Error</title>
+    <wr:renderStyles />
+  </head>
+  <body>
+    <h1><ao:out value="${pageScope.code}" /> Error</h1>
+  </body>
 </ao:html>

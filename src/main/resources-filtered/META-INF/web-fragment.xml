@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 ao-error-pages - A set of simple default servlet error pages to prevent accidental information disclosure.
-Copyright (C) 2021  AO Industries, Inc.
+Copyright (C) 2021, 2022  AO Industries, Inc.
     support@aoindustries.com
     7262 Bull Pen Cir
     Mobile, AL 36695
@@ -27,37 +27,37 @@ along with ao-error-pages.  If not, see <https://www.gnu.org/licenses/>.
                       http://xmlns.jcp.org/xml/ns/javaee/web-fragment_3_1.xsd"
   version="3.1"
   metadata-complete="false">
-	<name>@{project.groupId}:@{project.artifactId}</name>
-	<!-- <display-name>@{project.name} @{project.version}</display-name> -->
-	<description>@{project.description}</description>
+  <name>@{project.groupId}:@{project.artifactId}</name>
+  <!-- <display-name>@{project.name} @{project.version}</display-name> -->
+  <description>@{project.description}</description>
 
-	<!-- Error Pages -->
-	<error-page>
-		<error-code>401</error-code>
-		<location>/WEB-INF/ao-error-pages/unauthorized.jsp</location>
-	</error-page>
-	<error-page>
-		<error-code>403</error-code>
-		<location>/WEB-INF/ao-error-pages/forbidden.jsp</location>
-	</error-page>
-	<error-page>
-		<exception-type>java.lang.SecurityException</exception-type>
-		<location>/WEB-INF/ao-error-pages/forbidden.jsp</location>
-	</error-page>
-	<error-page>
-		<error-code>404</error-code>
-		<location>/WEB-INF/ao-error-pages/not-found.jsp</location>
-	</error-page>
-	<error-page>
-		<error-code>500</error-code>
-		<location>/WEB-INF/ao-error-pages/error.jsp</location>
-	</error-page>
-	<error-page>
-		<error-code>503</error-code>
-		<location>/WEB-INF/ao-error-pages/error.jsp</location>
-	</error-page>
-	<error-page>
-		<location>/WEB-INF/ao-error-pages/error.jsp</location>
-	</error-page>
+  <!-- Error Pages -->
+  <error-page>
+    <error-code>401</error-code>
+    <location>/WEB-INF/ao-error-pages/unauthorized.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>403</error-code>
+    <location>/WEB-INF/ao-error-pages/forbidden.jsp</location>
+  </error-page>
+  <error-page>
+    <exception-type>java.lang.SecurityException</exception-type>
+    <location>/WEB-INF/ao-error-pages/forbidden.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/WEB-INF/ao-error-pages/not-found.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/WEB-INF/ao-error-pages/error.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>503</error-code>
+    <location>/WEB-INF/ao-error-pages/error.jsp</location>
+  </error-page>
+  <error-page>
+    <location>/WEB-INF/ao-error-pages/error.jsp</location>
+  </error-page>
 
 </web-fragment>

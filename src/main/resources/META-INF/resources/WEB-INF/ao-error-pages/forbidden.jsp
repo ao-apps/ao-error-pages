@@ -1,6 +1,6 @@
 <%--
 ao-error-pages - A set of simple default servlet error pages to prevent accidental information disclosure.
-Copyright (C) 2021  AO Industries, Inc.
+Copyright (C) 2021, 2022  AO Industries, Inc.
     support@aoindustries.com
     7262 Bull Pen Cir
     Mobile, AL 36695
@@ -24,16 +24,20 @@ along with ao-error-pages.  If not, see <https://www.gnu.org/licenses/>.
 %><%@ page isErrorPage="true"
 %><%@ include file="taglibs.jspf"
 %><%
-	if(exception != null) log(null, exception);
-	// Set the error status
-	if(!response.isCommitted()) response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+  if (exception != null) {
+    log(null, exception);
+  }
+  // Set the error status
+  if (!response.isCommitted()) {
+    response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+  }
 %><ao:html>
-	<head>
-		<ao:meta charset="${pageContext.response.characterEncoding}" />
-		<title>403 Forbidden</title>
-		<wr:renderStyles />
-	</head>
-	<body>
-		<h1>403 Forbidden</h1>
-	</body>
+  <head>
+    <ao:meta charset="${pageContext.response.characterEncoding}" />
+    <title>403 Forbidden</title>
+    <wr:renderStyles />
+  </head>
+  <body>
+    <h1>403 Forbidden</h1>
+  </body>
 </ao:html>

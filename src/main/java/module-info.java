@@ -25,4 +25,4 @@ module com.aoapps.error.pages {
   requires com.aoapps.taglib; // <groupId>com.aoapps</groupId><artifactId>ao-taglib</artifactId>
   requires com.aoapps.web.resources.taglib; // <groupId>com.aoapps</groupId><artifactId>ao-web-resources-taglib</artifactId>
   requires taglibs.standard.spec; // <groupId>org.apache.taglibs</groupId><artifactId>taglibs-standard-spec</artifactId>
-} // TODO: Avoiding rewrite-maven-plugin-4.22.2 truncation
+}

@@ -1,6 +1,6 @@
 <%--
 ao-error-pages - A set of simple default servlet error pages to prevent accidental information disclosure.
-Copyright (C) 2021, 2022  AO Industries, Inc.
+Copyright (C) 2021, 2022, 2023  AO Industries, Inc.
     support@aoindustries.com
     7262 Bull Pen Cir
     Mobile, AL 36695
@@ -30,11 +30,10 @@ along with ao-error-pages.  If not, see <https://www.gnu.org/licenses/>.
   if (exception != null) {
     log(null, exception);
   }
-  // Set the error status
   if (!response.isCommitted()) {
+    // Set the error status
     Object code = pageContext.getAttribute("code");
     response.setStatus((code instanceof Integer) ? (Integer)code : Integer.parseInt(code.toString()));
-  }
 %><ao:html>
   <head>
     <ao:meta charset="${pageContext.response.characterEncoding}" />
@@ -44,4 +43,4 @@ along with ao-error-pages.  If not, see <https://www.gnu.org/licenses/>.
   <body>
     <h1><ao:out value="${pageScope.code}" /> Error</h1>
   </body>
-</ao:html>
+</ao:html><% } %>

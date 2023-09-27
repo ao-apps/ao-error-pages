@@ -37,10 +37,14 @@ along with ao-error-pages.  If not, see <https://www.gnu.org/licenses/>.
 %><ao:html>
   <head>
     <ao:meta charset="${pageContext.response.characterEncoding}" />
+    <wr:renderScripts position="HEAD_START" />
     <title><ao:out value="${pageScope.code}" /> Error</title>
     <wr:renderStyles />
+    <wr:renderScripts position="HEAD_END" />
   </head>
   <body>
+    <wr:renderScripts position="BODY_START" />
     <h1><ao:out value="${pageScope.code}" /> Error</h1>
+    <wr:renderScripts position="BODY_END" />
   </body>
 </ao:html><% } %>

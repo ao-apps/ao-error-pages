@@ -33,10 +33,14 @@ along with ao-error-pages.  If not, see <https://www.gnu.org/licenses/>.
 %><ao:html>
   <head>
     <ao:meta charset="${pageContext.response.characterEncoding}" />
+    <wr:renderScripts position="HEAD_START" />
     <title>404 Not Found</title>
     <wr:renderStyles />
+    <wr:renderScripts position="HEAD_END" />
   </head>
   <body>
+    <wr:renderScripts position="BODY_START" />
     <h1>404 Not Found</h1>
+    <wr:renderScripts position="BODY_END" />
   </body>
 </ao:html><% } %>

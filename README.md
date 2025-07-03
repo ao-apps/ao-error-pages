@@ -21,7 +21,7 @@ A set of simple default servlet error pages to prevent accidental information di
 ## Project Links
 * [Project Home](https://oss.aoapps.com/error-pages/)
 * [Changelog](https://oss.aoapps.com/error-pages/changelog)
-* [Maven Central Repository](https://central.sonatype.com/artifact/com.aoapps/ao-error-pages)
+* [Central Repository](https://central.sonatype.com/artifact/com.aoapps/ao-error-pages)
 * [GitHub](https://github.com/ao-apps/ao-error-pages)
 
 ## Contact Us

@@ -80,7 +80,7 @@ along with ao-error-pages.  If not, see <https://www.gnu.org/licenses/>.
 
   <ciManagement>
     <system>Jenkins</system>
-    <url>https://jenkins.aoindustries.com/job/ao/job/oss/job/error-pages/</url>
+    <url>https://jenkins.aoindustries.com/job/ao/job/oss/job/error-pages-javaee/</url>
   </ciManagement>
   <!-- Only one allowed in POM:
   <ciManagement>

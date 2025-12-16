@@ -34,12 +34,12 @@ def upstreamProjects = [
   'checkstyle-config', // <groupId>com.aoapps</groupId><artifactId>ao-checkstyle-config</artifactId>
 
   // Direct
-  'taglib', // <groupId>com.aoapps</groupId><artifactId>ao-taglib</artifactId>
-  'web-resources/taglib', // <groupId>com.aoapps</groupId><artifactId>ao-web-resources-taglib</artifactId>
+  'taglib-javaee', // <groupId>com.aoapps</groupId><artifactId>ao-taglib</artifactId>
+  'web-resources/taglib-javaee', // <groupId>com.aoapps</groupId><artifactId>ao-web-resources-taglib</artifactId>
   // No Jenkins: <groupId>org.apache.taglibs</groupId><artifactId>taglibs-standard-spec</artifactId>
 
   // Runtime Direct
-  'style', // <groupId>com.aoapps</groupId><artifactId>ao-style</artifactId>
+  'style-javaee', // <groupId>com.aoapps</groupId><artifactId>ao-style</artifactId>
   // No Jenkins: <groupId>org.apache.taglibs</groupId><artifactId>taglibs-standard-impl</artifactId>
 
   // BOM

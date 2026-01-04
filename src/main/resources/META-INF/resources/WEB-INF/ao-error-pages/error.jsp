@@ -1,6 +1,6 @@
 <%--
 ao-error-pages - A set of simple default servlet error pages to prevent accidental information disclosure.
-Copyright (C) 2021, 2022, 2023  AO Industries, Inc.
+Copyright (C) 2021, 2022, 2023, 2025, 2026  AO Industries, Inc.
     support@aoindustries.com
     7262 Bull Pen Cir
     Mobile, AL 36695
@@ -24,8 +24,8 @@ along with ao-error-pages.  If not, see <https://www.gnu.org/licenses/>.
 %><%@ page isErrorPage="true"
 %><%@ include file="taglibs.jspf"
 %><c:set var="code" value="${
-  empty requestScope['javax.servlet.error.status_code'] or requestScope['javax.servlet.error.status_code'] le 0
-    ? 500 : requestScope['javax.servlet.error.status_code']
+  empty requestScope['jakarta.servlet.error.status_code'] or requestScope['jakarta.servlet.error.status_code'] le 0
+    ? 500 : requestScope['jakarta.servlet.error.status_code']
 }" /><%
   if (exception != null) {
     log(null, exception);

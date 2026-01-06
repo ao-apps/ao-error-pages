@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 ao-error-pages - A set of simple default servlet error pages to prevent accidental information disclosure.
-Copyright (C) 2021, 2022, 2023, 2024, 2025  AO Industries, Inc.
+Copyright (C) 2021, 2022, 2023, 2024, 2025, 2026  AO Industries, Inc.
     support@aoindustries.com
     7262 Bull Pen Cir
     Mobile, AL 36695
@@ -37,7 +37,7 @@ along with ao-error-pages.  If not, see <https://www.gnu.org/licenses/>.
     shortTitle="Changelog"
     tocLevels="1"
     datePublished="2021-10-26T22:28:21-05:00"
-    dateModified="2025-07-02T23:05:45Z"
+    dateModified="2026-01-06T16:19:47Z"
   >
     <c:set var="latestRelease" value="1.1.0" />
     <c:if test="${
@@ -51,7 +51,17 @@ along with ao-error-pages.  If not, see <https://www.gnu.org/licenses/>.
         groupId="@{project.groupId}"
         artifactId="@{documented.artifactId}"
         scmUrl="@{project.scm.url}"
-      />
+      >
+        <ul>
+          <li>
+            Added specific error handler for <code>java.lang.Throwable</code>.  The catch-all (defined with neither
+            <code>error-code</code> nor <code>exception-type</code>) seems to not get triggered when an exception
+            occurs within an exception handler.  In at least Tomcat 10.1 (and likely many/all other versions), this
+            results in falling through to Tomcat's default error handler that shows a stack trace.  Adding a specific
+            error handler for <code>java.lang.Throwable</code> appears to resolve this issue.
+          </li>
+        </ul>
+      </changelog:release>
     </c:if>
 
     <changelog:release

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 ao-error-pages - A set of simple default servlet error pages to prevent accidental information disclosure.
-Copyright (C) 2021, 2022  AO Industries, Inc.
+Copyright (C) 2021, 2022, 2026  AO Industries, Inc.
     support@aoindustries.com
     7262 Bull Pen Cir
     Mobile, AL 36695
@@ -54,6 +54,10 @@ along with ao-error-pages.  If not, see <https://www.gnu.org/licenses/>.
   </error-page>
   <error-page>
     <error-code>503</error-code>
+    <location>/WEB-INF/ao-error-pages/error.jsp</location>
+  </error-page>
+  <error-page>
+    <exception-type>java.lang.Throwable</exception-type>
     <location>/WEB-INF/ao-error-pages/error.jsp</location>
   </error-page>
   <error-page>

@@ -37,7 +37,7 @@ along with ao-error-pages.  If not, see <https://www.gnu.org/licenses/>.
     shortTitle="Changelog"
     tocLevels="1"
     datePublished="2021-10-26T22:28:21-05:00"
-    dateModified="2025-12-30T13:42:11Z"
+    dateModified="2026-01-06T16:19:47Z"
   >
     <c:set var="latestRelease" value="1.1.0" />
     <c:if test="${
@@ -53,6 +53,13 @@ along with ao-error-pages.  If not, see <https://www.gnu.org/licenses/>.
         scmUrl="@{project.scm.url}"
       >
         <ul>
+          <li>
+            Added specific error handler for <code>java.lang.Throwable</code>.  The catch-all (defined with neither
+            <code>error-code</code> nor <code>exception-type</code>) seems to not get triggered when an exception
+            occurs within an exception handler.  In at least Tomcat 10.1 (and likely many/all other versions), this
+            results in falling through to Tomcat's default error handler that shows a stack trace.  Adding a specific
+            error handler for <code>java.lang.Throwable</code> appears to resolve this issue.
+          </li>
           <li>Updated to <ao:a href="https://jakarta.ee/specifications/webprofile/10/">Jakarta EE Web Profile 10</ao:a> (Servlet 6.0, JSP 3.1, EL 5.0, and JSTL 3.0).</li>
         </ul>
       </changelog:release>

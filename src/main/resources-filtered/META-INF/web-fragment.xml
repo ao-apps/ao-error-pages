@@ -57,6 +57,10 @@ along with ao-error-pages.  If not, see <https://www.gnu.org/licenses/>.
     <location>/WEB-INF/ao-error-pages/error.jsp</location>
   </error-page>
   <error-page>
+    <exception-type>java.lang.Throwable</exception-type>
+    <location>/WEB-INF/ao-error-pages/error.jsp</location>
+  </error-page>
+  <error-page>
     <location>/WEB-INF/ao-error-pages/error.jsp</location>
   </error-page>
 

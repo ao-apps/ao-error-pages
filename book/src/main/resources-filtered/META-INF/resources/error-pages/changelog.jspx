@@ -37,7 +37,7 @@ along with ao-error-pages.  If not, see <https://www.gnu.org/licenses/>.
     shortTitle="Changelog"
     tocLevels="1"
     datePublished="2021-10-26T22:28:21-05:00"
-    dateModified="2026-02-06T03:24:36Z"
+    dateModified="2026-02-06T03:54:42Z"
   >
     <c:set var="latestRelease" value="2.0.0" />
     <c:if test="${
@@ -77,8 +77,8 @@ along with ao-error-pages.  If not, see <https://www.gnu.org/licenses/>.
     >
       <ul>
         <li>
-          Added specific error handler for <code>java.lang.Throwable</code>.  The catch-all (defined with either
-          <code>error-code</code> or <code>exception-type</code>) seems to not get triggered when an exception
+          Added specific error handler for <code>java.lang.Throwable</code>.  The empty catch-all (defined with neither
+          <code>error-code</code> nor <code>exception-type</code>) seems to not get triggered when an exception
           occurs within an exception handler.  In at least Tomcat 10.1 (and likely many/all other versions), this
           results in falling through to Tomcat's default error handler that shows a stack trace.  Adding a specific
           error handler for <code>java.lang.Throwable</code> appears to resolve this issue.
